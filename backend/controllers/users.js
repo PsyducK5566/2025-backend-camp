@@ -7,8 +7,8 @@ const logger = require("../utils/logger")("UsersController");
 const generateJWT = require("../utils/generateJWT");
 
 // 修改密碼長度限制
-// 正規表達式：密碼需包含至少一個大寫字母、一個小寫字母和一個數字，長度介於8到16個字元之間
-const passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/;
+// 正規表達式：密碼需包含至少一個大寫字母、一個小寫字母和一個數字，長度介於10到16個字元之間
+const passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,16}/;
 
 function isUndefined(value) {
   return value === undefined;
