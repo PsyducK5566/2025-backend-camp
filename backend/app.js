@@ -23,9 +23,9 @@ app.use(
       req(req) {
         req.body = req.raw.body;
         return req;
-      },
-    },
-  }),
+      }
+    }
+  })
 );
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/healthcheck", (req, res) => {
   res.status(200).json({
     status: "success",
-    message: "OK",
+    message: "OK"
   });
 });
 
@@ -51,13 +51,13 @@ app.use((err, req, res, next) => {
   if (err.status) {
     res.status(err.status).json({
       status: "failed",
-      message: err.message,
+      message: err.message
     });
     return;
   }
   res.status(500).json({
     status: "error",
-    message: "伺服器錯誤",
+    message: "伺服器錯誤"
   });
 });
 
