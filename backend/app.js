@@ -30,10 +30,10 @@ app.use(
 app.use(express.static(path.join(__dirname, "public")));
 
 // 修改健康檢查回傳格式
-app.get("/healthcheck", (req, res) => {
+app.get('/healthcheck', (req, res) => {
   res.status(200).json({
-    status: "success",
-    message: "OK"
+    status: 'success',
+    message: 'OK'
   })
 })
 app.use("/api/credit-package", creditPackageRouter);
