@@ -29,7 +29,7 @@ app.use(
 );
 app.use(express.static(path.join(__dirname, "public")));
 
-// 修改健康檢查回傳格式
+// 修改健康檢查，回傳JSON格式訊息
 app.get('/healthcheck', (req, res) => {
   res.status(200).json({
     status: 'success',

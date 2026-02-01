@@ -1,8 +1,5 @@
-json
+JSON
+// prettier-ignore
 {
-    "trailingComma": "none"
-}
-
-{
-    "semi": false
+    "trailingComma": "none""semi": false
 }
